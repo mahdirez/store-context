@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { Context } from "./Context";
 
 function Details() {
-  const [data, setData] = useContext(Context);
+  const [data, setData , handleAddCart] = useContext(Context);
   const [countImg , setCountImg] = useState(0);
   const { id } = useParams();
 
@@ -32,7 +32,7 @@ function Details() {
                 })}
               </div>
               <p>قیمت:{items.price}</p>
-              <button className="bg-indigo-600 text-white p-2 rounded w-1/4">
+              <button className="bg-indigo-600 text-white p-2 rounded w-1/4" onClick={()=>handleAddCart(items.id)}>
                 افزودن به سبد خرید
               </button>
             </div>

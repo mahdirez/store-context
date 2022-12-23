@@ -11,7 +11,7 @@ function Content() {
          <img src={product.images[0]} className="w-full h-60 object-contain"/>
          <Link to={`/product/${product.id}`}><h1 className="hover:text-indigo-600">{product.title}</h1></Link>
          <p>قیمت:{product.price}</p>
-         <button className="bg-indigo-600 text-white p-2 rounded">افزودن به سبد خرید</button>
+        <Link to={`/product/${product.id}`}> <button className="bg-indigo-600 text-white p-2 rounded"> دیدن جزییات محصول  </button></Link>
       </div>
       })}
     </div>
